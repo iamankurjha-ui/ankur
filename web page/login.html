@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-</head>
-<body>
-    <h1>Login</h1>
-    <form action="">
-        Enter name <input type="text" id="loginusername" name="username"><br><br>
-        Enter password <input type="password" id="loginpassword" name="password"><br>
-        <input type="submit" value="Login" onclick="return login()">
-    </form>
-<script src="local.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Login</h1>
+      <form onsubmit="return login()">
+        <label for="loginusername">Username</label>
+        <input type="text" id="loginusername" name="username" />
+        <label for="loginpassword">Password</label>
+        <input type="password" id="loginpassword" name="password" />
+        <button type="submit">Login</button>
+      </form>
+      <p>Don't have an account? <a href="signup.html">Create an account</a></p>
+    </div>
+    <script src="local.js"></script>
+  </body>
 </html>

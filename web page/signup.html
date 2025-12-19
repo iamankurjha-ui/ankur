@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Sign Up</h1>
-        <form action="#" method="post">
+        <form onsubmit="return validateSignup()">
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -25,5 +25,6 @@
             <button type="submit">Sign Up</button>
         </form>
     </div>
+    <script src="home.js"></script>
 </body>
 </html>
