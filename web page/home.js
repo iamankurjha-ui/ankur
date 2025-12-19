@@ -48,6 +48,9 @@ function validateSignup() {
     return false;
   }
 
+  localStorage.setItem("username", email);
+  localStorage.setItem("password", password);
+
   alert("Sign up successful!");
   return true;
 }
