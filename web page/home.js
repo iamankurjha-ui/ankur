@@ -22,7 +22,8 @@ let fetchData = async () => {
 };
 fetchData();
 
-function validateSignup() {
+function validateSignup(event) {
+  event.preventDefault();
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value;
@@ -30,29 +31,29 @@ function validateSignup() {
 
   if (name === "") {
     alert("Full Name is required.");
-    return false;
+    return;
   }
 
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     alert("Please enter a valid email address.");
-    return false;
+    return;
   }
 
   if (password.length < 6) {
     alert("Password must be at least 6 characters long.");
-    return false;
+    return;
   }
 
   if (password !== confirmPassword) {
     alert("Passwords do not match.");
-    return false;
+    return;
   }
 
   localStorage.setItem("username", email);
   localStorage.setItem("password", password);
 
   alert("Sign up successful!");
-  return true;
+  window.location.href = "login.html";
 }
 
 if (document.querySelector("#datashow")) {

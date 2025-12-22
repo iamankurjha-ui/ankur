@@ -2,11 +2,8 @@ body{
     font-family: Arial, sans-serif;
     background-color:rgb(17, 179, 154);
     margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
+    padding: 20px;
     min-height: 100vh;
-    display: flex;
 }
 
 .container {
@@ -20,6 +17,8 @@ body{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 form{
